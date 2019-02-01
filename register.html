@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<nav>
+        <div class="container">
+            <div> 
+                <p style="float:left">
+                    <a href="homepage.html" style="padding-left: 100px">DJANGOPROJECTS</a>
+                 </p>
+                  <p style="float:right">
+                    <a href="index.html">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="table.php">Table</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="list.php">List</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;           
+                    </p>
+            </div>
+        </div>
+    </nav>
+
+<form action="reg.php" method="POST" align="center">
+
+<div style="padding-top:150px">
+Employee Name: <input type="text"  name="name" required><br><br>
+Employee Designation: <input type="text"  name="designation" required><br><br>
+Reporting Manager: <input type="text"  name="manager" required><br><br>
+
+<button type="submit" onclick= validateForm() >Add Information</button>
+</div>
+</form>
+</body>
+<script>
+function validateForm() {
+
+	if(document.getElementById('name').value === "" ){
+		alert("Please Enter Employee name");
+		return;
+	}
+	else if(document.getElementById('designation').value === "" ){
+		alert("Please Enter Employee Designation ");
+		return;
+	}
+	else if(document.getElementById('manager').value === "") {
+		alert("Please Enter Employee Reporting manager");
+		return;
+	}
+
+}
+</script>
+</html>
